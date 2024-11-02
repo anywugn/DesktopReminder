@@ -1,0 +1,10 @@
+# 忽略 build 文件夹
+build/
+图标/
+
+# 忽略特定文件
+Reminder.spec
+window_position.json
+
+# 忽略系统文件
+Thumbs.db
