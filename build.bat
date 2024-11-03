@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --add-data "icon.png;." --icon=icon.ico Reminder.py

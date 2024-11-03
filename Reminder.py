@@ -306,7 +306,7 @@ class DesktopReminderWidget(QWidget):
         with open("window_position.json", "w") as f:
             json.dump(position, f)
 
-    def load_window_position(self):
+    def load_window_position(self):            
         try:
             with open("window_position.json", "r") as f:
                 position = json.load(f)
@@ -340,6 +340,11 @@ class DesktopReminderWidget(QWidget):
         painter.drawRoundedRect(self.rect(), 15, 15)
 
 if __name__ == "__main__":
+    # 获取当前脚本所在的目录
+    current_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    # 将工作目录设置为脚本所在目录
+    os.chdir(current_dir)
+
     app = QApplication(sys.argv)
     widget = DesktopReminderWidget()
     widget.show()
